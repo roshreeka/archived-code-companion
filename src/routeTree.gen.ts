@@ -10,33 +10,81 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
+import { Route as ApiPublicHeritageRouteImport } from './routes/api/public/heritage'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreRoute = ExploreRouteImport.update({
+  id: '/explore',
+  path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
+  id: '/api/public/health',
+  path: '/api/public/health',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicHeritageRoute = ApiPublicHeritageRouteImport.update({
+  id: '/api/public/heritage',
+  path: '/api/public/heritage',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/explore': typeof ExploreRoute
+  '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/heritage': typeof ApiPublicHeritageRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/explore': typeof ExploreRoute
+  '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/heritage': typeof ApiPublicHeritageRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/explore': typeof ExploreRoute
+  '/api/public/health': typeof ApiPublicHealthRoute
+  '/api/public/heritage': typeof ApiPublicHeritageRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    '/' | '/about' | '/explore' | '/api/public/health' | '/api/public/heritage'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    '/' | '/about' | '/explore' | '/api/public/health' | '/api/public/heritage'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/explore'
+    | '/api/public/health'
+    | '/api/public/heritage'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ExploreRoute: typeof ExploreRoute
+  ApiPublicHealthRoute: typeof ApiPublicHealthRoute
+  ApiPublicHeritageRoute: typeof ApiPublicHeritageRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +96,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore': {
+      id: '/explore'
+      path: '/explore'
+      fullPath: '/explore'
+      preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/health': {
+      id: '/api/public/health'
+      path: '/api/public/health'
+      fullPath: '/api/public/health'
+      preLoaderRoute: typeof ApiPublicHealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/heritage': {
+      id: '/api/public/heritage'
+      path: '/api/public/heritage'
+      fullPath: '/api/public/heritage'
+      preLoaderRoute: typeof ApiPublicHeritageRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ExploreRoute: ExploreRoute,
+  ApiPublicHealthRoute: ApiPublicHealthRoute,
+  ApiPublicHeritageRoute: ApiPublicHeritageRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
