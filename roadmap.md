@@ -1,11 +1,13 @@
 # Roadmap
 
-- [ ] Migrate Heritage of Civilization site (Next.js archive) into this project: home + heritage detail pages, data, components
-- [ ] Apple-style 3D animated design (no AI images/videos/icons; use existing content only)
-- [ ] Section backgrounds: marigold orange, sindoor red, sky blue, temple green; maroon/burgundy footer
-- [ ] Pink→orange gradients on buttons/highlights; flag crimson + blue accents; warm light text tones
-- [ ] Colorful background behind the quote
-- [ ] Code-drawn borders: Dhaka cloth, Newari Ankhi jhyal lattice, toran top edge
-- [ ] English default with Nepali toggle on every page
-- [ ] Read-aloud (voice) option on every page
-- [ ] Homepage background picture (received) — use as hero background
+- [x] Migrate Ward 16 Heritage site (Next.js archive): home, explore, about, heritage story pages, content, API endpoints
+- [x] Apple-style 3D animated design (no AI images/videos/icons)
+- [x] Section backgrounds: marigold, sindoor red, sky blue, temple green; maroon footer
+- [x] Pink→orange buttons; flag crimson + blue accents; warm text tones
+- [x] Colorful background behind quotes
+- [x] Code-drawn borders: Dhaka cloth, Ankhi jhyal lattice, toran edge
+- [x] English default with Nepali toggle on every page
+- [x] Read-aloud (voice) option on every page
+- [x] Homepage background picture
+- [x] Explore Map page (Leaflet + OpenStreetMap), numbered markers, side panel with name/description/details link; "Explore" nav link
+- [ ] Exact map pin locations — waiting on user (pins approximate for now)

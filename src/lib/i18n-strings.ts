@@ -171,6 +171,26 @@ export const ui = {
   "footer.copy": { en: "© 2026 Ward 16 Heritage", ne: "© २०२६ वडा नं. १६ सम्पदा" },
   "footer.tagline": { en: "Built for memory, participation, and care.", ne: "सम्झना, सहभागिता र हेरचाहका लागि बनाइएको।" },
 
+  "nav.map": { en: "Explore", ne: "अन्वेषण" },
+  "map.kicker": { en: "Explore map", ne: "अन्वेषण नक्सा" },
+  "map.title": { en: "Find the heritage of Ward 16 on the map.", ne: "नक्सामा वडा नं. १६ का सम्पदाहरू खोज्नुहोस्।" },
+  "map.lead": {
+    en: "Select a numbered marker to see the place's name, a short description, and a link to its story.",
+    ne: "ठाउँको नाम, छोटो विवरण र त्यसको कथाको लिंक हेर्न अंकित चिन्हमा थिच्नुहोस्।",
+  },
+  "map.region": { en: "Map of Ward 16 heritage sites", ne: "वडा नं. १६ का सम्पदा स्थलहरूको नक्सा" },
+  "map.loading": { en: "Loading map…", ne: "नक्सा लोड हुँदैछ…" },
+  "map.pick": { en: "Select a marker on the map", ne: "नक्सामा कुनै चिन्ह छान्नुहोस्" },
+  "map.sites": { en: "Heritage sites", ne: "सम्पदा स्थलहरू" },
+  "map.details": { en: "View details", ne: "विवरण हेर्नुहोस्" },
+  "map.approximate": {
+    en: "Approximate position — exact location awaiting community verification.",
+    ne: "अनुमानित स्थान — सही स्थान सामुदायिक प्रमाणीकरणको प्रतीक्षामा।",
+  },
+  "story.pendingBody": {
+    en: "This place is part of the Ward 16 collection. Its documented story will be added here once it has been gathered and verified with the community.",
+    ne: "यो ठाउँ वडा नं. १६ को संग्रहको हिस्सा हो। यसको अभिलेखित कथा समुदायसँग संकलन र प्रमाणीकरण भएपछि यहाँ थपिनेछ।",
+  },
   "voice.listen": { en: "Listen", ne: "सुन्नुहोस्" },
   "voice.listenPage": { en: "Listen to this page", ne: "यो पृष्ठ सुन्नुहोस्" },
   "voice.listenSection": { en: "Listen to this section", ne: "यो खण्ड सुन्नुहोस्" },

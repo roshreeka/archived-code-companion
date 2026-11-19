@@ -6,6 +6,7 @@ import { ListenPageButton } from "./voice-controls";
 const navItems = [
   { to: "/", key: "nav.home" },
   { to: "/explore", key: "nav.explore" },
+  { to: "/map", key: "nav.map" },
   { to: "/about", key: "nav.about" },
 ] as const;
 

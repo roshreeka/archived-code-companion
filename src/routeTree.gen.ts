@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as MapRouteImport } from './routes/map'
+import { Route as HeritageSlugRouteImport } from './routes/heritage.$slug'
 import { Route as ApiPublicHealthRouteImport } from './routes/api/public/health'
 import { Route as ApiPublicHeritageRouteImport } from './routes/api/public/heritage'
 
@@ -30,6 +32,16 @@ const ExploreRoute = ExploreRouteImport.update({
   path: '/explore',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MapRoute = MapRouteImport.update({
+  id: '/map',
+  path: '/map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HeritageSlugRoute = HeritageSlugRouteImport.update({
+  id: '/heritage/$slug',
+  path: '/heritage/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicHealthRoute = ApiPublicHealthRouteImport.update({
   id: '/api/public/health',
   path: '/api/public/health',
@@ -45,6 +57,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/explore': typeof ExploreRoute
+  '/map': typeof MapRoute
+  '/heritage/$slug': typeof HeritageSlugRoute
   '/api/public/health': typeof ApiPublicHealthRoute
   '/api/public/heritage': typeof ApiPublicHeritageRoute
 }
@@ -52,6 +66,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/explore': typeof ExploreRoute
+  '/map': typeof MapRoute
+  '/heritage/$slug': typeof HeritageSlugRoute
   '/api/public/health': typeof ApiPublicHealthRoute
   '/api/public/heritage': typeof ApiPublicHeritageRoute
 }
@@ -60,21 +76,37 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/explore': typeof ExploreRoute
+  '/map': typeof MapRoute
+  '/heritage/$slug': typeof HeritageSlugRoute
   '/api/public/health': typeof ApiPublicHealthRoute
   '/api/public/heritage': typeof ApiPublicHeritageRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/explore' | '/api/public/health' | '/api/public/heritage'
+    | '/'
+    | '/about'
+    | '/explore'
+    | '/map'
+    | '/heritage/$slug'
+    | '/api/public/health'
+    | '/api/public/heritage'
   fileRoutesByTo: FileRoutesByTo
   to:
-    '/' | '/about' | '/explore' | '/api/public/health' | '/api/public/heritage'
+    | '/'
+    | '/about'
+    | '/explore'
+    | '/map'
+    | '/heritage/$slug'
+    | '/api/public/health'
+    | '/api/public/heritage'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/explore'
+    | '/map'
+    | '/heritage/$slug'
     | '/api/public/health'
     | '/api/public/heritage'
   fileRoutesById: FileRoutesById
@@ -83,6 +115,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ExploreRoute: typeof ExploreRoute
+  MapRoute: typeof MapRoute
+  HeritageSlugRoute: typeof HeritageSlugRoute
   ApiPublicHealthRoute: typeof ApiPublicHealthRoute
   ApiPublicHeritageRoute: typeof ApiPublicHeritageRoute
 }
@@ -110,6 +144,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ExploreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/map': {
+      id: '/map'
+      path: '/map'
+      fullPath: '/map'
+      preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/heritage/$slug': {
+      id: '/heritage/$slug'
+      path: '/heritage/$slug'
+      fullPath: '/heritage/$slug'
+      preLoaderRoute: typeof HeritageSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/health': {
       id: '/api/public/health'
       path: '/api/public/health'
@@ -131,6 +179,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ExploreRoute: ExploreRoute,
+  MapRoute: MapRoute,
+  HeritageSlugRoute: HeritageSlugRoute,
   ApiPublicHealthRoute: ApiPublicHealthRoute,
   ApiPublicHeritageRoute: ApiPublicHeritageRoute,
 }

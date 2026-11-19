@@ -1,15 +1,75 @@
 {
-  "source": "code-archive: hoc_techLeaders.zip (Ward 16 Heritage — Next.js 16 frontend + Express skeleton)",
+  "source": "code-archive: hoc_techLeaders.zip (Ward 16 Heritage \u2014 Next.js 16 frontend + Express skeleton)",
   "capabilities": [
-    {"capability": "code: pages (home, heritage story pages), components, content data", "source": "frontend/app, frontend/components, frontend/lib/heritage-data.ts", "outcome": "migrate", "status": "in_progress", "next_action": "Recreate as TanStack routes with new 3D design requested by user"},
-    {"capability": "schema", "source": "none (backend message says PostgreSQL in a later phase)", "outcome": "not_applicable", "status": "verified", "next_action": "none — no database exists in source"},
-    {"capability": "records", "source": "typed static content in heritage-data.ts", "outcome": "migrate", "status": "in_progress", "next_action": "Carry content into project as static data with English + Nepali text"},
-    {"capability": "auth identities / authorization", "source": "none detected", "outcome": "not_applicable", "status": "verified", "next_action": "none"},
-    {"capability": "uploaded file bytes / images", "source": "/manus-storage placeholder images (not included in archive; AI placeholders)", "outcome": "replace", "status": "in_progress", "next_action": "User asked for no AI images; use code-drawn visuals. Homepage background picture pending from user"},
-    {"capability": "public endpoints", "source": "backend GET /api/health, GET /api/heritage (Express :4000)", "outcome": "migrate", "status": "in_progress", "next_action": "Recreate as server routes /api/public/health and /api/public/heritage"},
-    {"capability": "external providers / webhooks / schedules / callbacks", "source": "none detected (chatbot planned, not built)", "outcome": "not_applicable", "status": "verified", "next_action": "none"},
-    {"capability": "secrets", "source": "PORT only (runtime config)", "outcome": "not_applicable", "status": "verified", "next_action": "none"},
-    {"capability": "cutover", "source": "API base moves from :4000/api/* to /api/public/*", "outcome": "accept", "status": "pending", "next_action": "No known external callers"},
-    {"capability": "verification", "source": "-", "outcome": "verify", "status": "pending", "next_action": "Build, routes, language toggle, read-aloud"}
+    {
+      "capability": "code: pages (home, heritage story pages), components, content data",
+      "source": "frontend/app, frontend/components, frontend/lib/heritage-data.ts",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "schema",
+      "source": "none (backend message says PostgreSQL in a later phase)",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none \u2014 no database exists in source"
+    },
+    {
+      "capability": "records",
+      "source": "typed static content in heritage-data.ts",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "auth identities / authorization",
+      "source": "none detected",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "uploaded file bytes / images",
+      "source": "/manus-storage placeholder images (not included in archive; AI placeholders)",
+      "outcome": "replace",
+      "status": "verified",
+      "next_action": "Hero uses user photo; other visuals drawn in code"
+    },
+    {
+      "capability": "public endpoints",
+      "source": "backend GET /api/health, GET /api/heritage (Express :4000)",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "external providers / webhooks / schedules / callbacks",
+      "source": "none detected (chatbot planned, not built)",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "secrets",
+      "source": "PORT only (runtime config)",
+      "outcome": "not_applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "cutover",
+      "source": "API base moves from :4000/api/* to /api/public/*",
+      "outcome": "accept",
+      "status": "accepted",
+      "next_action": "No known external callers"
+    },
+    {
+      "capability": "verification",
+      "source": "-",
+      "outcome": "verify",
+      "status": "verified",
+      "next_action": "none"
+    }
   ]
 }

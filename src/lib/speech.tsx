@@ -102,7 +102,7 @@ export function SpeechProvider({ children }: { children: ReactNode }) {
           setStatus("idle");
           return;
         }
-        const { text, el } = chunks[i++];
+        const { text, el } = chunks[i++]!;
         if (currentEl.current !== el) {
           clearHighlight();
           currentEl.current = el;

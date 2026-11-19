@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- All user-visible text lives in `src/lib/i18n-strings.ts` (UI) or as `{ en, ne }` objects in `src/lib/heritage-data.ts` (content); `src/test/translations-and-map.test.ts` fails if a Nepali version is missing. Why: every page must switch fully to Nepali.
+- Read-aloud reads `main [data-read]` elements in DOM order; mark new readable text with `data-read`. Why: one generic voice player covers every page.
+- Leaflet is imported only in `src/components/heritage/heritage-map.tsx`, loaded via `React.lazy` behind `<ClientOnly>`; map positions live in browser-safe `src/lib/map-sites.ts`. Why: Leaflet touches `window` at import and breaks SSR.

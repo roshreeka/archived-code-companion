@@ -1,14 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import { heritageSites } from "@/lib/heritage-data";
+import { heritageSites, type HeritageSite } from "@/lib/heritage-data";
 import { DhakaBand, ToranEdge } from "./patterns";
 
 export function SiteFooter() {
   const { t, tr } = useI18n();
-  const siddhi = heritageSites[0];
-  const koncha = heritageSites[1];
-  const dhara = heritageSites[2];
+  const [siddhi, koncha, dhara] = heritageSites as [HeritageSite, HeritageSite, HeritageSite, ...HeritageSite[]];
   return (
     <footer id="chatbot" className="sec sec-maroon !pb-10 !pt-0">
       <ToranEdge />
