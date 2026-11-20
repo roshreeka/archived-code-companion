@@ -48,7 +48,7 @@ function Hero() {
         />
         <div className="hero3d-content">
           <div className="shell">
-            <span className="eyebrow text-gold">{t("hero.kicker")}</span>
+            <span className="eyebrow text-petal">{t("hero.kicker")}</span>
             <h1 id="hero-title" data-read className="display-xl hero3d-title mt-6 max-w-5xl text-cream">
               {t("hero.title")}
             </h1>

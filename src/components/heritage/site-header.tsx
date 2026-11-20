@@ -3,7 +3,7 @@ import { Languages } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { ListenPageButton } from "./voice-controls";
 
-const navItems = [
+export const navItems = [
   { to: "/", key: "nav.home" },
   { to: "/explore", key: "nav.explore" },
   { to: "/map", key: "nav.map" },

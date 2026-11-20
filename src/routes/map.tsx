@@ -4,8 +4,6 @@ import { lazy, Suspense, useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { getHeritageSite, heritageSites } from "@/lib/heritage-data";
 import { mapSites } from "@/lib/map-sites";
-import { PageHero } from "@/components/heritage/sections";
-import { ToranEdge } from "@/components/heritage/patterns";
 
 const HeritageMap = lazy(() => import("@/components/heritage/heritage-map"));
 
@@ -49,10 +47,9 @@ function MapPage() {
 
   return (
     <main>
-      <PageHero kicker={t("map.kicker")} title={t("map.title")} lead={t("map.lead")} />
-      <section className="sec sec-sky !pt-0">
-        <ToranEdge />
-        <div className="shell grid gap-8 pt-16 lg:grid-cols-[1.6fr_1fr] lg:pt-20">
+      <section className="sec sec-powder !mt-0 !rounded-none !pt-28 md:!pt-32">
+        <h1 className="sr-only">{t("map.title")}</h1>
+        <div className="shell grid gap-8 lg:grid-cols-[1.6fr_1fr]">
           <div className="map-frame lg:self-start">
             <ClientOnly fallback={fallback}>
               <Suspense fallback={fallback}>

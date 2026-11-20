@@ -15,10 +15,10 @@ import { SectionHeading } from "./section-heading";
 
 export function AboutSection({
   id = "about",
-  tone = "marigold",
+  tone = "blush",
 }: {
   id?: string;
-  tone?: "marigold" | "sindoor";
+  tone?: "blush" | "rose";
 }) {
   const { t } = useI18n();
 
@@ -78,7 +78,7 @@ export function CollectionSection({
   const { t } = useI18n();
 
   return (
-    <section id={id} className="sec sec-sindoor !pt-0">
+    <section id={id} className="sec sec-rose !pt-0">
       <ToranEdge />
 
       <div className="shell pt-20 md:pt-24">
@@ -87,7 +87,7 @@ export function CollectionSection({
           title={t("explore.title")}
           copy={t("explore.copy")}
           action={
-            <a href="#preserve" className="text-link text-gold">
+            <a href="#preserve" className="text-link text-petal">
               {t("explore.action")} <ArrowUpRight size={16} />
             </a>
           }
@@ -138,7 +138,7 @@ function getYouTubeId(url: string) {
 
 export function PreservationSection() {
   return (
-    <section id="preserve" className="sec sec-sky !pt-0">
+    <section id="preserve" className="sec sec-powder !pt-0">
       <ToranEdge />
 
       <div className="shell py-20 md:py-24">
@@ -235,13 +235,13 @@ export function SourcesSection() {
   return (
     <section
       aria-label={t("sources.eyebrow")}
-      className="sec sec-temple !pt-0"
+      className="sec sec-dusk !pt-0"
     >
       <ToranEdge />
 
       <div className="shell pt-20 md:pt-24">
         <Reveal>
-          <span className="eyebrow text-gold">
+          <span className="eyebrow text-petal">
             {t("sources.eyebrow")}
           </span>
         </Reveal>
@@ -270,7 +270,7 @@ export function SourcesSection() {
   );
 }
 
-/** Opening band for inner pages: marigold, with a faint carved-window lattice. */
+/** Opening band for inner pages: soft blush, with a faint carved-window lattice. */
 export function PageHero({
   kicker,
   title,
@@ -285,7 +285,7 @@ export function PageHero({
   aside?: ReactNode;
 }) {
   return (
-    <section className="page-hero sec-marigold">
+    <section className="page-hero sec-blush">
       <AnkhiLattice
       />
 

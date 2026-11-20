@@ -10,9 +10,10 @@
 
 /*
  * Ward 16 Heritage design system.
- * Bright section colours (marigold, sindoor, sky, temple green, maroon footer),
- * pink→orange gradients for actions, flag crimson + flag blue accents,
- * warm text tones (never near-black), and Newari patterns drawn in code.
+ * Soft Nepal-flag palette: gentle shades of crimson, flag blue and white.
+ * Sections: blush, muted rose, powder blue, dusty blue, navy footer.
+ * Crimson→rose-pink gradients for actions; soft slate text (never near-black);
+ * Newari patterns (Dhaka, Ankhi jhyal, toran) drawn in code.
  */
 
 @theme inline {
@@ -61,10 +62,11 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --color-marigold: var(--marigold);
-  --color-sindoor: var(--sindoor);
-  --color-sky: var(--sky);
-  --color-temple: var(--temple);
+  --color-blush: var(--blush);
+  --color-rose: var(--rose);
+  --color-powder: var(--powder);
+  --color-dusk: var(--dusk);
+  --color-navy: var(--navy);
   --color-maroon: var(--maroon);
   --color-crimson: var(--crimson);
   --color-flag-blue: var(--flag-blue);
@@ -72,57 +74,57 @@
   --color-parchment: var(--parchment);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
-  --color-gold: var(--gold);
+  --color-petal: var(--petal);
   --color-on-dark: var(--on-dark);
   --color-on-dark-soft: var(--on-dark-soft);
   --color-pink: var(--pink);
-  --color-orange: var(--orange);
   --color-wood: var(--wood);
 }
 
 :root {
   --radius: 1rem;
 
-  /* Heritage palette */
-  --marigold: oklch(0.79 0.165 68);
-  --marigold-deep: oklch(0.7 0.18 55);
-  --sindoor: oklch(0.56 0.215 29);
-  --sindoor-deep: oklch(0.47 0.19 27);
-  --sky: oklch(0.8 0.105 228);
-  --sky-deep: oklch(0.68 0.13 238);
-  --temple: oklch(0.55 0.13 152);
-  --temple-deep: oklch(0.45 0.11 155);
-  --maroon: oklch(0.34 0.11 18);
-  --maroon-deep: oklch(0.28 0.09 16);
-  --crimson: oklch(0.55 0.22 22);
-  --flag-blue: oklch(0.38 0.17 262);
-  --pink: oklch(0.64 0.23 2);
-  --orange: oklch(0.7 0.19 48);
-  --gold: oklch(0.84 0.14 86);
-  --wood: oklch(0.44 0.09 45);
-  --wood-light: oklch(0.6 0.1 60);
-  --cream: oklch(0.975 0.022 85);
-  --parchment: oklch(0.935 0.045 80);
-  --ink: oklch(0.36 0.075 38);
-  --ink-soft: oklch(0.5 0.065 45);
-  --on-dark: oklch(0.96 0.035 85);
-  --on-dark-soft: oklch(0.9 0.05 80);
+  /* Heritage palette: Nepal flag crimson, blue and white, softened */
+  --blush: oklch(0.955 0.024 12);
+  --blush-deep: oklch(0.9 0.045 12);
+  --rose: oklch(0.57 0.125 15);
+  --rose-deep: oklch(0.48 0.12 15);
+  --powder: oklch(0.93 0.032 245);
+  --powder-deep: oklch(0.8 0.065 250);
+  --dusk: oklch(0.46 0.085 260);
+  --dusk-deep: oklch(0.38 0.08 262);
+  --navy: oklch(0.3 0.072 264);
+  --navy-deep: oklch(0.25 0.062 264);
+  --maroon: oklch(0.43 0.13 14);
+  --maroon-deep: oklch(0.35 0.11 14);
+  --crimson: oklch(0.55 0.18 18);
+  --flag-blue: oklch(0.42 0.13 262);
+  --pink: oklch(0.74 0.11 8);
+  --petal: oklch(0.88 0.06 10);
+  --wood: oklch(0.34 0.07 262);
+  --wood-light: oklch(0.6 0.06 252);
+  --cream: oklch(0.99 0.006 20);
+  --parchment: oklch(0.95 0.018 15);
+  --ink: oklch(0.37 0.06 265);
+  --ink-soft: oklch(0.52 0.045 262);
+  --on-dark: oklch(0.975 0.01 20);
+  --on-dark-soft: oklch(0.9 0.025 15);
 
   /* Gradients */
-  --gradient-cta: linear-gradient(115deg, var(--pink) 0%, var(--orange) 100%);
-  --gradient-highlight: linear-gradient(100deg, var(--pink), var(--orange));
+  --gradient-cta: linear-gradient(115deg, var(--crimson) 0%, var(--pink) 100%);
+  --gradient-highlight: linear-gradient(100deg, var(--pink), var(--powder-deep));
   --gradient-quote:
-    radial-gradient(40% 55% at 12% 18%, oklch(0.7 0.22 0 / 0.95), transparent 70%),
-    radial-gradient(42% 50% at 88% 14%, oklch(0.84 0.16 80 / 0.95), transparent 70%),
-    radial-gradient(45% 55% at 84% 88%, oklch(0.75 0.13 235 / 0.95), transparent 70%),
-    radial-gradient(40% 55% at 14% 86%, oklch(0.62 0.15 150 / 0.95), transparent 70%),
-    radial-gradient(35% 40% at 50% 50%, oklch(0.6 0.22 25 / 0.9), transparent 75%),
-    linear-gradient(135deg, var(--orange), var(--pink));
+    radial-gradient(42% 55% at 12% 18%, oklch(0.82 0.08 10 / 0.95), transparent 70%),
+    radial-gradient(42% 50% at 88% 14%, oklch(0.88 0.045 250 / 0.95), transparent 70%),
+    radial-gradient(45% 55% at 84% 88%, oklch(0.74 0.08 255 / 0.9), transparent 70%),
+    radial-gradient(40% 55% at 14% 86%, oklch(0.72 0.11 12 / 0.9), transparent 70%),
+    radial-gradient(35% 40% at 50% 50%, oklch(0.97 0.01 20 / 0.9), transparent 75%),
+    linear-gradient(135deg, var(--blush-deep), var(--powder-deep));
 
   /* Depth */
-  --shadow-panel: 0 1px 0 oklch(1 0 0 / 0.6) inset, 0 30px 60px -25px oklch(0.3 0.1 30 / 0.45), 0 12px 24px -12px oklch(0.3 0.1 30 / 0.3);
-  --shadow-lift: 0 50px 90px -35px oklch(0.28 0.1 25 / 0.55), 0 20px 40px -20px oklch(0.3 0.1 30 / 0.35);
-  --shadow-btn: 0 14px 30px -12px oklch(0.6 0.22 20 / 0.7);
+  --shadow-panel: 0 1px 0 oklch(1 0 0 / 0.6) inset, 0 30px 60px -25px oklch(0.3 0.07 264 / 0.3), 0 12px 24px -12px oklch(0.3 0.07 264 / 0.2);
+  --shadow-lift: 0 50px 90px -35px oklch(0.3 0.07 264 / 0.4), 0 20px 40px -20px oklch(0.3 0.07 264 / 0.25);
+  --shadow-btn: 0 14px 30px -12px oklch(0.55 0.18 18 / 0.55);
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* shadcn mapping */
@@ -138,25 +140,25 @@
   --secondary-foreground: var(--cream);
   --muted: var(--parchment);
   --muted-foreground: var(--ink-soft);
-  --accent: var(--marigold);
+  --accent: var(--blush-deep);
   --accent-foreground: var(--maroon);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: var(--cream);
-  --border: oklch(0.85 0.05 70);
-  --input: oklch(0.85 0.05 70);
+  --border: oklch(0.88 0.03 15);
+  --input: oklch(0.88 0.03 15);
   --ring: var(--flag-blue);
-  --chart-1: var(--marigold);
-  --chart-2: var(--sindoor);
-  --chart-3: var(--sky);
-  --chart-4: var(--temple);
-  --chart-5: var(--maroon);
+  --chart-1: var(--crimson);
+  --chart-2: var(--flag-blue);
+  --chart-3: var(--pink);
+  --chart-4: var(--powder-deep);
+  --chart-5: var(--navy);
   --sidebar: var(--cream);
   --sidebar-foreground: var(--ink);
   --sidebar-primary: var(--crimson);
   --sidebar-primary-foreground: var(--cream);
   --sidebar-accent: var(--parchment);
   --sidebar-accent-foreground: var(--ink);
-  --sidebar-border: oklch(0.85 0.05 70);
+  --sidebar-border: oklch(0.88 0.03 15);
   --sidebar-ring: var(--flag-blue);
 }
 
@@ -168,7 +170,7 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: var(--maroon);
+    background-color: var(--navy);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -207,7 +209,7 @@
     border-radius: 3rem 3rem 0 0;
     overflow: clip;
     isolation: isolate;
-    box-shadow: 0 -30px 60px -30px oklch(0.25 0.08 25 / 0.45);
+    box-shadow: 0 -30px 60px -30px oklch(0.25 0.06 264 / 0.35);
   }
   .sec::before {
     content: "";
@@ -217,26 +219,26 @@
     pointer-events: none;
     background:
       radial-gradient(60% 50% at 85% 0%, oklch(1 0 0 / 0.28), transparent 70%),
-      radial-gradient(50% 50% at 0% 100%, oklch(0.3 0.1 30 / 0.18), transparent 70%);
+      radial-gradient(50% 50% at 0% 100%, oklch(0.3 0.07 264 / 0.1), transparent 70%);
   }
-  .sec-marigold {
-    background: var(--marigold);
+  .sec-blush {
+    background: var(--blush);
     color: var(--maroon);
   }
-  .sec-sindoor {
-    background: var(--sindoor);
+  .sec-rose {
+    background: var(--rose);
     color: var(--on-dark);
   }
-  .sec-sky {
-    background: var(--sky);
-    color: var(--maroon);
+  .sec-powder {
+    background: var(--powder);
+    color: var(--flag-blue);
   }
-  .sec-temple {
-    background: var(--temple);
+  .sec-dusk {
+    background: var(--dusk);
     color: var(--on-dark);
   }
-  .sec-maroon {
-    background: var(--maroon);
+  .sec-navy {
+    background: var(--navy);
     color: var(--on-dark);
   }
 
@@ -296,15 +298,15 @@
     line-height: 1;
     color: var(--cream);
     text-shadow:
-      1px 1px 0 var(--marigold-deep),
-      2px 2px 0 var(--marigold-deep),
-      3px 3px 0 var(--orange),
-      4px 4px 0 var(--orange),
-      5px 5px 0 var(--pink),
-      6px 6px 0 var(--pink),
-      7px 7px 0 var(--crimson),
-      8px 8px 0 var(--crimson),
-      14px 18px 28px oklch(0.25 0.1 25 / 0.45);
+      1px 1px 0 var(--petal),
+      2px 2px 0 var(--pink),
+      3px 3px 0 var(--pink),
+      4px 4px 0 var(--crimson),
+      5px 5px 0 var(--crimson),
+      6px 6px 0 var(--flag-blue),
+      7px 7px 0 var(--flag-blue),
+      8px 8px 0 var(--navy),
+      14px 18px 28px oklch(0.25 0.06 264 / 0.35);
   }
 
   /* ---------- Panels (warm cream sheets with depth) ---------- */
@@ -316,7 +318,7 @@
     box-shadow: var(--shadow-panel);
   }
   .panel-glass {
-    background: oklch(0.98 0.02 85 / 0.62);
+    background: oklch(0.99 0.006 20 / 0.62);
     backdrop-filter: blur(18px) saturate(1.4);
     -webkit-backdrop-filter: blur(18px) saturate(1.4);
     border: 1px solid oklch(1 0 0 / 0.55);
@@ -343,8 +345,8 @@
   }
   .btn-gradient:hover {
     transform: translateY(-3px) scale(1.03);
-    filter: saturate(1.15);
-    box-shadow: 0 22px 40px -14px oklch(0.6 0.22 20 / 0.8);
+    filter: brightness(1.05);
+    box-shadow: 0 22px 40px -14px oklch(0.55 0.18 18 / 0.6);
   }
   .btn-gradient:active {
     transform: translateY(0) scale(0.98);
@@ -356,14 +358,14 @@
     padding: 0.9rem 1.4rem;
     border-radius: 999px;
     font-weight: 600;
-    background: oklch(0.98 0.02 85 / 0.18);
-    border: 1px solid oklch(0.98 0.02 85 / 0.5);
+    background: oklch(0.99 0.006 20 / 0.18);
+    border: 1px solid oklch(0.99 0.006 20 / 0.5);
     color: var(--on-dark);
     backdrop-filter: blur(10px);
     transition: background 0.3s, transform 0.4s var(--ease-out);
   }
   .btn-glass:hover {
-    background: oklch(0.98 0.02 85 / 0.3);
+    background: oklch(0.99 0.006 20 / 0.3);
     transform: translateY(-2px);
   }
   .btn-pill {
@@ -376,7 +378,7 @@
     font-weight: 700;
     border: 1.5px solid var(--flag-blue);
     color: var(--flag-blue);
-    background: oklch(0.98 0.02 85 / 0.7);
+    background: oklch(0.99 0.006 20 / 0.7);
     transition: background 0.3s, color 0.3s, transform 0.3s var(--ease-out);
   }
   .btn-pill:hover {
@@ -415,11 +417,11 @@
     gap: 1rem;
     padding: 0.55rem 0.6rem 0.55rem 0.9rem;
     border-radius: 999px;
-    background: oklch(0.98 0.02 85 / 0.78);
+    background: oklch(0.99 0.006 20 / 0.78);
     backdrop-filter: blur(20px) saturate(1.6);
     -webkit-backdrop-filter: blur(20px) saturate(1.6);
     border: 1px solid oklch(1 0 0 / 0.7);
-    box-shadow: 0 20px 40px -24px oklch(0.3 0.1 30 / 0.5);
+    box-shadow: 0 20px 40px -24px oklch(0.3 0.07 264 / 0.35);
     color: var(--ink);
   }
   .brand-seal {
@@ -434,9 +436,9 @@
     font-weight: 800;
     font-size: 1.05rem;
     box-shadow:
-      3px 3px 0 var(--crimson),
-      6px 6px 0 var(--maroon),
-      8px 10px 18px -4px oklch(0.3 0.1 30 / 0.5);
+      3px 3px 0 var(--pink),
+      6px 6px 0 var(--flag-blue),
+      8px 10px 18px -4px oklch(0.3 0.07 264 / 0.4);
     transform: perspective(300px) rotateY(-14deg) rotateX(8deg);
     transition: transform 0.6s var(--ease-out);
   }
@@ -453,15 +455,15 @@
   }
   .nav-link:hover,
   .nav-link[data-status="active"] {
-    background: oklch(0.79 0.165 68 / 0.28);
-    color: var(--maroon);
+    background: oklch(0.55 0.18 18 / 0.1);
+    color: var(--crimson);
   }
 
   /* ---------- Hero (user photo as background, scroll-driven 3D) ---------- */
   .hero3d {
     position: relative;
     height: 175vh;
-    background: var(--maroon);
+    background: var(--navy);
   }
   .hero3d-sticky {
     position: sticky;
@@ -481,7 +483,7 @@
     transform: rotateX(calc(var(--p, 0) * 28deg)) scale(calc(1.06 - var(--p, 0) * 0.3))
       translateY(calc(var(--p, 0) * -4%));
     border-radius: calc(var(--p, 0) * 56px);
-    box-shadow: 0 60px 120px -30px oklch(0.15 0.06 20 / calc(var(--p, 0) * 0.9));
+    box-shadow: 0 60px 120px -30px oklch(0.15 0.05 264 / calc(var(--p, 0) * 0.9));
     will-change: transform;
   }
   .hero3d-photo::after {
@@ -490,9 +492,9 @@
     inset: 0;
     border-radius: inherit;
     background:
-      linear-gradient(to top, oklch(0.3 0.1 20 / 0.92) 0%, oklch(0.3 0.1 20 / 0.55) 38%, oklch(0.3 0.1 20 / 0.15) 70%, oklch(0.3 0.1 20 / 0.35) 100%),
-      radial-gradient(80% 60% at 20% 90%, oklch(0.64 0.23 2 / 0.35), transparent 70%),
-      radial-gradient(70% 50% at 90% 80%, oklch(0.7 0.19 48 / 0.3), transparent 70%);
+      linear-gradient(to top, oklch(0.27 0.07 264 / 0.9) 0%, oklch(0.27 0.07 264 / 0.55) 38%, oklch(0.27 0.07 264 / 0.15) 70%, oklch(0.27 0.07 264 / 0.35) 100%),
+      radial-gradient(80% 60% at 20% 90%, oklch(0.55 0.18 18 / 0.3), transparent 70%),
+      radial-gradient(70% 50% at 90% 80%, oklch(0.6 0.1 255 / 0.3), transparent 70%);
   }
   .hero3d-content {
     position: absolute;
@@ -503,7 +505,7 @@
     transform: translateY(calc(var(--p, 0) * -90px)) translateZ(60px);
   }
   .hero3d-title {
-    text-shadow: 0 4px 30px oklch(0.25 0.1 20 / 0.6);
+    text-shadow: 0 4px 30px oklch(0.22 0.06 264 / 0.6);
   }
   .hero-rail {
     position: absolute;
@@ -535,7 +537,7 @@
     height: 8px;
     margin-left: -2px;
     border-radius: 4px;
-    background: var(--gold);
+    background: var(--petal);
     animation: cue 1.8s var(--ease-out) infinite;
   }
 
@@ -545,6 +547,9 @@
     padding-block: 9.5rem 6.5rem;
     overflow: clip;
     isolation: isolate;
+  }
+  .page-hero > svg:first-child {
+    opacity: 0.12;
   }
 
   /* ---------- 3D reveal on scroll ---------- */
@@ -622,16 +627,16 @@
     transform-style: preserve-3d;
   }
   .card-visual-a {
-    background: linear-gradient(140deg, var(--marigold), var(--orange));
+    background: linear-gradient(140deg, var(--pink), var(--crimson));
   }
   .card-visual-b {
-    background: linear-gradient(140deg, var(--sky), var(--flag-blue));
+    background: linear-gradient(140deg, var(--powder-deep), var(--flag-blue));
   }
   .card-visual-c {
-    background: linear-gradient(140deg, var(--temple), var(--temple-deep));
+    background: linear-gradient(140deg, var(--blush-deep), var(--pink));
   }
   .card-visual-d {
-    background: linear-gradient(140deg, var(--pink), var(--sindoor));
+    background: linear-gradient(140deg, var(--dusk), var(--navy));
   }
   .card-plaque {
     display: grid;
@@ -641,7 +646,7 @@
     border-radius: 1.2rem;
     background: var(--cream);
     color: var(--maroon);
-    box-shadow: 0 18px 30px -12px oklch(0.25 0.1 25 / 0.6);
+    box-shadow: 0 18px 30px -12px oklch(0.25 0.06 264 / 0.45);
     text-align: center;
   }
   .status-chip {
@@ -660,7 +665,7 @@
     color: var(--cream);
   }
   .status-pending {
-    background: oklch(0.98 0.02 85 / 0.85);
+    background: oklch(0.99 0.006 20 / 0.85);
     color: var(--flag-blue);
   }
 
@@ -679,17 +684,17 @@
     color: var(--flag-blue);
   }
   .source-community-belief {
-    background: oklch(0.79 0.165 68 / 0.3);
+    background: oklch(0.74 0.11 8 / 0.22);
     color: var(--maroon);
   }
   .source-folklore {
-    background: oklch(0.55 0.22 22 / 0.13);
+    background: oklch(0.55 0.18 18 / 0.12);
     color: var(--crimson);
   }
   .source-documented,
   .source-placeholder {
-    background: oklch(0.55 0.13 152 / 0.15);
-    color: var(--temple-deep);
+    background: oklch(0.8 0.065 250 / 0.3);
+    color: var(--dusk-deep);
   }
 
   /* ---------- Colourful quote ---------- */
@@ -741,7 +746,7 @@
     font-weight: 700;
     font-size: 0.95rem;
     border: 3px solid var(--cream);
-    box-shadow: 0 6px 14px -4px oklch(0.3 0.1 30 / 0.6);
+    box-shadow: 0 6px 14px -4px oklch(0.3 0.07 264 / 0.5);
     transition: transform 0.25s var(--ease-out), background 0.25s;
   }
   .map-pin.is-active {
@@ -761,7 +766,7 @@
     transition: background 0.2s;
   }
   .site-option:hover {
-    background: oklch(0.79 0.165 68 / 0.22);
+    background: oklch(0.55 0.18 18 / 0.08);
   }
   .site-option[aria-pressed="true"] {
     background: oklch(0.38 0.17 262 / 0.12);
@@ -785,8 +790,8 @@
 
   /* ---------- Reading highlight ---------- */
   [data-read].is-reading {
-    background: oklch(0.84 0.14 86 / 0.45);
-    box-shadow: 0 0 0 6px oklch(0.84 0.14 86 / 0.45);
+    background: oklch(0.88 0.06 10 / 0.55);
+    box-shadow: 0 0 0 6px oklch(0.88 0.06 10 / 0.55);
     border-radius: 6px;
     transition: background 0.3s, box-shadow 0.3s;
   }
@@ -803,11 +808,11 @@
     gap: 0.6rem;
     padding: 0.5rem 0.55rem 0.5rem 1rem;
     border-radius: 999px;
-    background: oklch(0.98 0.02 85 / 0.88);
+    background: oklch(0.99 0.006 20 / 0.88);
     backdrop-filter: blur(20px) saturate(1.5);
     -webkit-backdrop-filter: blur(20px) saturate(1.5);
     border: 1px solid oklch(1 0 0 / 0.7);
-    box-shadow: 0 24px 50px -20px oklch(0.3 0.1 30 / 0.6);
+    box-shadow: 0 24px 50px -20px oklch(0.3 0.07 264 / 0.45);
     color: var(--ink);
     animation: dock-in 0.5s var(--ease-out);
   }
@@ -844,7 +849,7 @@
     transition: background 0.25s, transform 0.25s;
   }
   .icon-btn:hover {
-    background: oklch(0.79 0.165 68 / 0.3);
+    background: oklch(0.55 0.18 18 / 0.1);
     transform: scale(1.06);
   }
   .icon-btn-primary {
@@ -857,52 +862,52 @@
 
   /* ---------- Code-drawn Newari patterns ---------- */
   .toran-rope {
-    fill: var(--gold);
+    fill: var(--navy);
   }
   .toran-a {
-    fill: var(--marigold);
-  }
-  .toran-b {
     fill: var(--crimson);
   }
+  .toran-b {
+    fill: var(--flag-blue);
+  }
   .toran-drop {
-    fill: var(--temple);
+    fill: var(--pink);
   }
   .toran-bell {
-    fill: var(--gold);
+    fill: var(--petal);
   }
   .toran-line {
-    stroke: var(--maroon);
+    stroke: var(--cream);
     stroke-width: 1.2;
     opacity: 0.55;
   }
 
   .dhaka-bg {
-    fill: var(--maroon-deep);
+    fill: var(--navy-deep);
   }
   .dhaka-1 {
     fill: var(--crimson);
   }
   .dhaka-2 {
-    fill: var(--marigold);
+    fill: var(--pink);
   }
   .dhaka-3 {
     fill: var(--cream);
   }
   .dhaka-4 {
-    fill: var(--temple);
+    fill: var(--flag-blue);
   }
   .dhaka-5 {
-    fill: var(--sky);
+    fill: var(--powder-deep);
   }
   .dhaka-stripe {
-    fill: var(--gold);
+    fill: var(--petal);
   }
 
   .ankhi-bar-shadow {
-    stroke: var(--maroon-deep);
+    stroke: var(--navy-deep);
     stroke-width: 7;
-    opacity: 0.55;
+    opacity: 0.45;
   }
   .ankhi-bar {
     stroke: var(--wood);
@@ -913,7 +918,7 @@
     stroke-width: 1.4;
   }
   .ankhi-rosette {
-    fill: var(--gold);
+    fill: var(--petal);
     stroke: var(--wood);
     stroke-width: 1.2;
   }

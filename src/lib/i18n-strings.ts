@@ -171,7 +171,7 @@ export const ui = {
   "footer.copy": { en: "© 2026 Ward 16 Heritage", ne: "© २०२६ वडा नं. १६ सम्पदा" },
   "footer.tagline": { en: "Built for memory, participation, and care.", ne: "सम्झना, सहभागिता र हेरचाहका लागि बनाइएको।" },
 
-  "nav.map": { en: "Explore", ne: "अन्वेषण" },
+  "nav.map": { en: "Explore Map", ne: "सम्पदा नक्सा" },
   "map.kicker": { en: "Explore map", ne: "अन्वेषण नक्सा" },
   "map.title": { en: "Find the heritage of Ward 16 on the map.", ne: "नक्सामा वडा नं. १६ का सम्पदाहरू खोज्नुहोस्।" },
   "map.lead": {

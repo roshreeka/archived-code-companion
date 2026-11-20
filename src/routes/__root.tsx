@@ -21,7 +21,7 @@ import { VoiceDock } from "../components/heritage/voice-controls";
 function NotFoundComponent() {
   const { t } = useI18n();
   return (
-    <main className="sec-marigold flex min-h-screen items-center justify-center px-4 pt-24">
+    <main className="sec-blush flex min-h-screen items-center justify-center px-4 pt-24">
       <div className="max-w-md text-center">
         <h1 className="extrude text-8xl">404</h1>
         <h2 data-read className="mt-6 text-2xl font-semibold">
@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "theme-color", content: "#E8A33A" },
+      { name: "theme-color", content: "#B03A4E" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

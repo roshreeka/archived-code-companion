@@ -72,7 +72,7 @@ function StoryPage() {
 
       {site.documented ? (
         <>
-          <section className="sec sec-sky !pt-0">
+          <section className="sec sec-powder !pt-0">
             <ToranEdge />
             <div className="shell grid gap-10 pt-16 lg:grid-cols-[0.75fr_1.6fr] lg:pt-20">
               <aside className="lg:sticky lg:top-28 lg:self-start">
@@ -122,13 +122,13 @@ function StoryPage() {
             </div>
           </section>
 
-          <section className="sec sec-temple !pt-0">
+          <section className="sec sec-dusk !pt-0">
             <ToranEdge />
             <div className="shell grid gap-12 pt-16 lg:pt-20">
               <ColorfulQuote>{tr(site.quote)}</ColorfulQuote>
 
               <div>
-                <span className="eyebrow text-gold">{t("story.galleryEyebrow")}</span>
+                <span className="eyebrow text-petal">{t("story.galleryEyebrow")}</span>
                 <h2 data-read className="display-lg mt-4">{t("story.galleryTitle")}</h2>
                 <p data-read className="mt-4 max-w-2xl text-lg text-on-dark-soft">{t("story.galleryCopy")}</p>
                 <div className="mt-8 grid gap-6 md:grid-cols-3">
@@ -180,7 +180,7 @@ function StoryPage() {
           </section>
         </>
       ) : (
-        <section className="sec sec-sky !pt-0">
+        <section className="sec sec-powder !pt-0">
           <ToranEdge />
           <div className="shell grid gap-6 pt-16 md:grid-cols-2 lg:pt-20">
             <div className="panel p-7 md:p-9">
@@ -199,10 +199,10 @@ function StoryPage() {
         </section>
       )}
 
-      <section className="sec sec-sindoor !pt-0">
+      <section className="sec sec-rose !pt-0">
         <ToranEdge />
         <div className="shell pt-16 lg:pt-20">
-          <span className="eyebrow text-gold">{t("story.relatedEyebrow")}</span>
+          <span className="eyebrow text-petal">{t("story.relatedEyebrow")}</span>
           <h2 data-read className="display-lg mt-4">{t("story.relatedTitle")}</h2>
           <p data-read className="mt-4 max-w-2xl text-lg">{t("story.relatedCopy")}</p>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -215,7 +215,7 @@ function StoryPage() {
               </Tilt>
             ))}
           </div>
-          <Link to="/explore" className="text-link mt-10 text-gold">
+          <Link to="/explore" className="text-link mt-10 text-petal">
             <ArrowLeft size={16} /> {t("story.back")}
           </Link>
         </div>

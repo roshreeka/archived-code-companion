@@ -24,7 +24,7 @@ function AboutPage() {
   return (
     <main>
       <PageHero kicker={t("aboutPage.kicker")} title={t("aboutPage.title")} lead={t("hero.lead")} />
-      <AboutSection id="ward" tone="sindoor" />
+      <AboutSection id="ward" tone="rose" />
       <PreservationSection />
       <SourcesSection />
     </main>

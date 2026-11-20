@@ -14,7 +14,7 @@ export function HeritageCard({ site, index, featured = false }: { site: Heritage
     <Tilt className="h-full rounded-[2rem]" max={featured ? 7 : 10}>
       <article className="heritage-card">
         <div className={`card-visual ${visuals[index % visuals.length]} ${featured ? "h-64 md:h-72" : "h-44"}`}>
-          <AnkhiLattice cell={featured ? 34 : 26} className="opacity-70" />
+          <AnkhiLattice cell={featured ? 34 : 26} className="opacity-30" />
           <div className="absolute inset-0 grid place-items-center" style={{ transformStyle: "preserve-3d" }}>
             <div className="card-plaque pop">
               <span className={`extrude ${featured ? "text-6xl" : "text-4xl"}`} aria-hidden="true">
